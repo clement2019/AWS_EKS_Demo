@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: app-server
-          image: cumuluscycles/eks-demo-app:1.0
+          image: good777lord/aws_eks_demoimg:latest
           ports:
             - containerPort: 3000
 

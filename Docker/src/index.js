@@ -10,19 +10,19 @@ app.use(function(req, res, next) {
 // Hard-Coded for demo
 const CONTACTS = [
                     {
-                      "name": "Foo Bar",
-                      "email": "foobar@test.com",
-                      "cell": "555-123-4567"
+                      "name": "Funsho philips",
+                      "email": "funsho@yahoo.com",
+                      "phone": "+234-80444565"
                     },
                     {
-                      "name": "Biz Baz",
-                      "email": "bizbaz@test.com",
-                      "cell": "555-123-5678"
+                      "name": "hope emilodun",
+                      "email": "emilodun@gmail.com",
+                      "phone": "+234-803347777"
                     },
                     {
-                      "name": "Bing Bang",
-                      "email": "bingbang@test.com",
-                      "cell": "555-123-6789"
+                      "name": "feyi ayeni",
+                      "email": "mafeyi@yahoo.com",
+                      "phone": "+234-80334565"
                     }
                 ];
 
