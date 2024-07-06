@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: app-server
-          image: good777lord/aws_eks_demoimg:latest
+          image: good777lord/aws_eks_demoimg2:latest
           ports:
             - containerPort: 3000
 
