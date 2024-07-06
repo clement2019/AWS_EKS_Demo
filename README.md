@@ -1,14 +1,19 @@
 # AWS_EKS_demo project
-Commands:
-# on mac
+
+Commands used in the project:
+### on mac
 $brew update
+
 $brew install awscli
-# Configure eksctl (EKS CLI created by Weaveworks)
+
+### Configure eksctl (EKS CLI created by Weaveworks)
  $brew tap weaveworks/tap
+
  $brew install weaveworks/tap/eksctl
+
  eksctl version
 
-# Create a Cluster
+### Create a Cluster
  eksctl create cluster \
  --name demo-cluster-110 \
  --version 1.29 \
@@ -22,30 +27,45 @@ $brew install awscli
 
  $ eksctl get cluster
 
-# update kubeconfig file
+### update kubeconfig file
  $aws eks update-kubeconfig --name demo-cluster-110 --region eu-west-2
 
-# Create a Deployment on the EKS Cluster within the directory that has all the manuscripts files
+### Create a Deployment on the EKS Cluster within the directory that has all the manuscripts files
 
-  kubectl apply -f app-server-deployment.yaml
-  kubectl get all
+$cd k8s
+
+kubectl apply -f app-server-deployment.yaml
+
+kubectl get all
+
  kubectl get nodes
+
  kubectl get pods
+
  kubectl get pod <podname>
-# for troubleshooting
+
+kubectl get svc
+
+kubectl get service <servicename>
+
+### for troubleshooting
+
 kubectl describe pod <podname>
+
 kubectl get logs
-# to investigate inside the container
+
+### to investigate inside the container
+
 kubectl exec -it <podname> -- bin/bash
 
 
-# Test Deployment:
+### Test Deployment:
 1. kubectl get all
 2. Copy LoadBalacner Endpoint
 3. http://YOUR_LOAD_BALANCER_ENDPOINT:3000/contacts
 
 
-# To delete the stackand cluster
+### To delete the stackand cluster
 $ eksctl delete cluster --name demo-cluster-110
 
 
